@@ -1,5 +1,41 @@
+  <img src='https://coverager.com/wp-content/uploads/2019/10/FRIDAY.png' width='30%' align='center'>
 <h1 align='center'>FRIDAY Code Challenge
-  <span>
-  <img src='https://coverager.com/wp-content/uploads/2019/10/FRIDAY.png' width='20%' align='left'>
-  </span>
+ 
 </h1> 
+<h2 align='center'>Objective </h2>
+Process addresses from an external addresses provider into a format that is compatible with our system
+
+### Scope of work
+An address provider returns addresses only with concatenated street names and numbers. However, our system has separate fields for street name and street number. We are going to take in the address, process it and return a JSON object with street and houseumber as keys with corresponding values
+
+### Language Used
+Python
+
+### Procedure
+For every address received, the following procedure is followed. We use Regex, IF and ELSE statements to match various address patterns and process them accordingly
+1. Check if address starts and ends with a string 
+2. Check if the address starts with a number and contains only that number
+3. Check if address ends with a number. If so, check for the keyword "No" and whether it contains more numbers
+
+For every pattern matched, further confirmatory checks are carried out to be sure of correctness of street and houseumber 
+
+### Tools Used
+1. Pytest
+2. https://regex101.com/ (To check Regex patterns)
+
+### Tests
+I used pytest library to write and run tests against the code
+
+## Code
+The repository contains the following files
+
+process_addresses.py - Main script for processing received addresses
+
+## How to set up and run the code
+1. Forsk and clone the repository 
+2. RUN pip install -r requirements.txt to install the libraries
+3. Change to the root directory
+4. RUN python app.py command to start the app
+5. To run tests, RUN pytest command from the root directory
+
+
