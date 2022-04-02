@@ -32,10 +32,13 @@ The repository contains the following files
 process_addresses.py - Main script for processing received addresses
 
 ## How to set up and run the code
-1. Forsk and clone the repository 
-2. RUN pip install -r requirements.txt to install the libraries
-3. Change to the root directory
-4. RUN python app.py command to start the app
-5. To run tests, RUN pytest command from the root directory
+1. Fork and clone the repository 
+2. RUN 
+```
+pip install -r requirements.txt to install the libraries
+```
+4. Change to the root directory
+5. RUN python app.py command to start the app
+6. To run tests, RUN pytest command from the root directory
 
 
