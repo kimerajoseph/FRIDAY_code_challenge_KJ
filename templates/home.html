@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Insurance Bill</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  
+</head>
+
+<body>
+ <div class="login">
+   
+    <h1>Process address from external provider</h1>
+    <br>
+    <br>
+
+    <select name="name-type" id="name-type">
+   
+      <option value="" disabled selected>Select prediction type</option>
+      <option value="multiple_addresses">Enter address(es)</option>
+      <option value="csv_address">Upload csv file with multiple addresses</option>
+    </select>
+    <br>
+    <h4 style="color: red;" id="warning">{{data}}</h4>
+    <br>
+
+   <!-- form for multiple addresses -->
+   <div class="multiple-addresses-div" id="multiple-addresses-div" >
+    <form name="multiple_address_form" action="{{ url_for('process_addresses_func')}}" method="post">     
+      <input placeholder="Enter sample address here" name="entered_address_1"/>
+      <br>    
+      <br>
+      <div class="dynamic-inputs" id="dynamic-container">
+      </div>
+      <button style="font-size:large;padding: 5px;border-radius: 5px;background-color: rgb(12, 246, 238);margin-left: 0;"
+      id="add_address_btn" onclick="addInput(); return false">Add address</button>
+      <br>
+      <br>
+      <button class="btn btn-primary col-sm-4" type="submit"> Process Address(es)</button>
+      </form>
+   </div>
+  
+   <br>
+   <br>
+    <!-- BATCH OF ADDRESSES -->
+
+<div class="csv_names_div" id="csv_names_div">
+  <form  enctype="multipart/form-data" id="file_form" action="{{ url_for('process_address_csv')}}" method="post">
+    <p><input type="file" name="csv_file" id="csv_file"></p>
+<small style="color: aliceblue;">Upload a csv file with an address column</small>
+    <br>
+    <br>
+    <button class="btn btn-primary col-sm-4" type="submit"> Process Addresses</button>
+  </form>
+
+</div>
+   
+ </div>
+ 
+ 
+
+</body>
+</html>
+
+<script>
+  var selectElement = document.getElementById("name-type");
+  // var address = document.getElementById("single-address-div");
+  var multiAddresses = document.getElementById("multiple-addresses-div");
+  var csvAddresses = document.getElementById("csv_names_div");
+
+  var addAddressBtn = document.getElementById("add_address_btn");
+  var container = document.getElementById("dynamic-container");
+  var warningHeader = document.getElementById("warning");
+
+  
+
+  var numberOfDynamicInputs = 1
+// screen function
+// switches off both forms when called
+function blankScreen(){
+  // address.style.display = "none"
+  multiAddresses.style.display = "none"
+  csvAddresses.style.display = "none"
+  warningHeader.style.display = "none"  
+}
+
+
+  // attach event listener to select element
+selectElement.addEventListener('change', function(){
+  let selectedValue = selectElement.value
+ if(selectedValue == 'multiple_addresses'){
+        blankScreen()
+        multiAddresses.style.display = "block"
+      }
+      else if(selectedValue == 'csv_address'){
+        blankScreen()
+        csvAddresses.style.display = "block"
+      }
+    })
+
+    function addInput(event){
+                numberOfDynamicInputs += 1
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "entered_address_"+numberOfDynamicInputs
+                console.log(input.name)
+                input.placeholder = "Enter sample address here"
+                
+                container.appendChild(input);
+                // // Append a line break 
+                container.appendChild(document.createElement("br"));
+                container.appendChild(document.createElement("br"));
+    }
+
+      // Event Listener for csv upload
+  const fileForm = document.getElementById("file_form")
+  const csvFileInput = document.getElementById("csv_file")
+
+  fileForm.addEventListener('submit',(e) =>{
+  if (csvFileInput.value === '' )
+  {alert("Upload at least one csv file")
+  e.preventDefault()}
+
+    var filePath = csvFileInput.value;
+    var allowedExtensions = /(\.csv)$/i;
+    if(csvFileInput.value != '' && !allowedExtensions.exec(filePath)){
+      alert("Upload csv files only")
+      e.preventDefault()
+    }
+  })
+</script>
+

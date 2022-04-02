@@ -1,0 +1,20 @@
+TO MAKE AN API CALL, FOLLOW THE PROCEDURE BELOW 
+
+PREREQUISITES
+- API testing tool like Postman or Thunder extension for VSCODE
+
+The API accepts two data formats:
+- A dictionary
+- A list of dictionaries
+
+SAMPLE DATA 
+Dictionary with a key "address"
+
+{"entered_address":"Am Bächle 23"}
+
+A list of dictionaries. Each dictionary has one key "address"
+
+[ {"address":"Am Bächle 23"}, {"address":"Musterstrasse 45"},{ "address":"Calle 39 No 1540"}]
+
+NOTE: The application can process single or multiple addresses in a single request
+

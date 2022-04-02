@@ -1,0 +1,11 @@
+Running the app in the browser
+
+The app runs on http://localhost:5000/
+
+There are two options from the Select Element
+1. Type the address in the input box for both single and multiple address requests. Press the "add address" button to add
+more input boxes and type in the addresses and click the "Process address(es)" button 
+For a single address, the app returns a form with the processed data 
+2. Uploading a CSV file with an address column. User can upload a CSV file containing a single address 
+or multiple addresses. After uploading the file, click the "Process address(es)" button. 
+The app returns a JSON object with the processed data 

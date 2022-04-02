@@ -4,3 +4,6 @@ venv/
 *.ipynb
 *.txt
 !requirements.txt
+test.js
+!using_the_web_UI.txt
+!api_call_procedure.txt
