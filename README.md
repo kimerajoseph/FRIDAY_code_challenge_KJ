@@ -45,11 +45,11 @@ The repository contains the following files
 virtualenv <your-virtual-env-name>
 ```
 4. Activate the created virtual environment
-### WINDOWS
+#### WINDOWS
 ```
 <your-venv-name>\Scripts\activate
 ```
-### LINUX
+#### LINUX
 ```
 source <your-venv-name>/bin/activate
 ```
