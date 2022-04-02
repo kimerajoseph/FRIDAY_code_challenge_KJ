@@ -1,7 +1,7 @@
   <img src='https://coverager.com/wp-content/uploads/2019/10/FRIDAY.png' width='20%' style = "align:center; margin=:auto">
 <h1 align='center'>FRIDAY Code Challenge</h1> 
 <h2 align='center'>Objective </h2>
-Process addresses from an external addresses provider into a format that is compatible with our system
+Process addresses from an external addresses provider into a format that is compatible with our internal system
 
 ## Scope of work
 An address provider returns addresses only with concatenated street names and numbers. However, our system has separate fields for street name and street number. We are going to take in the address, process it and return a JSON object with street and housenumber as keys with corresponding values
@@ -13,7 +13,7 @@ Python
 Python 3.9
 
 ### Procedure
-For every address received, the following procedure is followed. We use Regex, IF and ELSE statements to match various address patterns and process them accordingly. We use conditional statements to:
+For every address received, the following procedure is followed. We use Regex and conditional statements to match various address patterns and process them accordingly. We use conditional statements to:
 1. Check if address starts and ends with a string 
 2. Check if the address starts with a number and contains only that number
 3. Check if address ends with a number. If so, check for the keyword "No" and whether it contains more numbers
