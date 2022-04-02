@@ -1,4 +1,4 @@
-  <img src='https://coverager.com/wp-content/uploads/2019/10/FRIDAY.png' width='20%' align='center'>
+  <img src='https://coverager.com/wp-content/uploads/2019/10/FRIDAY.png' width='20%' style = "align:center; margin=:auto">
 <h1 align='center'>FRIDAY Code Challenge</h1> 
 <h2 align='center'>Objective </h2>
 Process addresses from an external addresses provider into a format that is compatible with our system
