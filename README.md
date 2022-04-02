@@ -39,11 +39,11 @@ process_addresses.py - Main script for processing received addresses
 virtualenv <your-virtual-env-name>
 ```
 4. Activate the created virtual environment
-WINDOWS
+### WINDOWS
 ```
 <your-venv-name>\Scripts\activate
 ```
-LINUX
+### LINUX
 ```
 source <your-venv-name>/bin/activate
 ```
@@ -56,7 +56,8 @@ pip install -r requirements.txt
 python app.py
 ```
 7. There are two options for using the app. Througn an Aplication Programming Interface (API) or web User interface (UI)
-8. To make a request using the API, <a href = "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks" target="_blank"><p> Follow this link </p><a/>
+8. To make a request using the API, <a href = "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks" target="_blank"><p> Follow this procedure </p><a/>
+9. To user the web UI, <a href = "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks" target="_blank"><p> Follow this procedure </p><a/>
 9. To run tests, RUN pytest command from the root directory
 ```
 pytest
