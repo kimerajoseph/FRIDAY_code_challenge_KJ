@@ -25,6 +25,9 @@ For every pattern matched, further confirmatory checks are carried out to be sur
 
 ### Tests
 I used pytest library to write and run tests against the code
+Tests check the following:
+1. That the object returned is a dictionary with two key-value pairs
+2. That both keys and values are of type string
 
 ## Code
 The repository contains the following files
