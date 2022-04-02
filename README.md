@@ -4,7 +4,7 @@
 Process addresses from an external addresses provider into a format that is compatible with our system
 
 ## Scope of work
-An address provider returns addresses only with concatenated street names and numbers. However, our system has separate fields for street name and street number. We are going to take in the address, process it and return a JSON object with street and houseumber as keys with corresponding values
+An address provider returns addresses only with concatenated street names and numbers. However, our system has separate fields for street name and street number. We are going to take in the address, process it and return a JSON object with street and housenumber as keys with corresponding values
 
 ### Language Used
 Python
