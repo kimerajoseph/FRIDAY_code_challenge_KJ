@@ -2,6 +2,10 @@ TO MAKE AN API CALL, FOLLOW THE PROCEDURE BELOW
 
 PREREQUISITES
 - API testing tool like Postman or Thunder extension for VSCODE
+- Knowlege of making API POST requests to an API end point
+
+API full address
+http://localhost:5000/process_address_api
 
 The API accepts two data formats:
 - A dictionary
@@ -10,7 +14,7 @@ The API accepts two data formats:
 SAMPLE DATA 
 Dictionary with a key "address"
 
-{"entered_address":"Am Bächle 23"}
+{"address":"Am Bächle 23"}
 
 A list of dictionaries. Each dictionary has one key "address"
 

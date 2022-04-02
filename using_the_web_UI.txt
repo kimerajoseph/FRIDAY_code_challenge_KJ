@@ -2,7 +2,7 @@ Running the app in the browser
 
 The app runs on http://localhost:5000/
 
-There are two options from the Select Element
+There are two options from the Select Element on the home page
 1. Type the address in the input box for both single and multiple address requests. Press the "add address" button to add
 more input boxes and type in the addresses and click the "Process address(es)" button 
 For a single address, the app returns a form with the processed data 
