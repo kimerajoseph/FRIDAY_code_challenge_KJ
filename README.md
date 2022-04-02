@@ -10,7 +10,7 @@ An address provider returns addresses only with concatenated street names and nu
 Python
 
 ### Procedure
-For every address received, the following procedure is followed. We use Regex, IF and ELSE statements to match various address patterns and process them accordingly
+For every address received, the following procedure is followed. We use Regex, IF and ELSE statements to match various address patterns and process them accordingly. We use conditional statements to:
 1. Check if address starts and ends with a string 
 2. Check if the address starts with a number and contains only that number
 3. Check if address ends with a number. If so, check for the keyword "No" and whether it contains more numbers
