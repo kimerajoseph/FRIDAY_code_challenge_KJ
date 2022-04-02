@@ -58,6 +58,7 @@ source <your-venv-name>/bin/activate
 pip install -r requirements.txt 
 ```
 6. Set up your environment variables in .env file
+You have to set up your email first. If you are using gmail, <a href="https://support.google.com/accounts/answer/6010255?hl=en"><p>Check out this link </p></a>
 ```
 sending_email_address=<your-sample-email-address>
 password=<password-for-your-sample-application>
