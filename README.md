@@ -17,6 +17,7 @@ For every address received, the following procedure is followed. We use Regex, I
 1. Check if address starts and ends with a string 
 2. Check if the address starts with a number and contains only that number
 3. Check if address ends with a number. If so, check for the keyword "No" and whether it contains more numbers
+4. Send out an email alert in case the provided address does not match any of the patterns
 
 For every pattern matched, further confirmatory checks are carried out to be sure of correctness of street and housenumber 
 
@@ -60,8 +61,9 @@ source <your-venv-name>/bin/activate
 ```
 pip install -r requirements.txt 
 ```
-6. Set up your environment variables in .env file
+6. Set up your environment variables in .env file.
 You have to set up your email first. If you are using gmail, <a href="https://support.google.com/accounts/answer/6010255?hl=en"><p>Check out this link </p></a>
+These emails are to be used in sending alerts to team members
 ```
 sending_email_address=<your-sample-email-address>
 password=<password-for-your-sample-application>
