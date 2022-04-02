@@ -33,12 +33,33 @@ process_addresses.py - Main script for processing received addresses
 
 ## How to set up and run the code
 1. Fork and clone the repository 
-2. RUN 
+2. Change to the root directory of the project folder
+3. Create a virtual environemnt
 ```
-pip install -r requirements.txt to install the libraries
+virtualenv <your-virtual-env-name>
 ```
-4. Change to the root directory
-5. RUN python app.py command to start the app
-6. To run tests, RUN pytest command from the root directory
+4. Activate the created virtual environment
+WINDOWS
+```
+<your-venv-name>\Scripts\activate
+```
+LINUX
+```
+source <your-venv-name>/bin/activate
+```
+5. Install the dependencies 
+```
+pip install -r requirements.txt 
+```
+6. Start the app
+```
+python app.py
+```
+7. There are two options for using the app. Througn an Aplication Programming Interface (API) or web User interface (UI)
+8. To make a request using the API, <a href = "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks"><p> Follow this link </p><a/>
+9. To run tests, RUN pytest command from the root directory
+```
+pytest
+```
 
 
