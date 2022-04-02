@@ -57,14 +57,20 @@ source <your-venv-name>/bin/activate
 ```
 pip install -r requirements.txt 
 ```
-6. Start the app
+6. Set up your environment variables in .env file
+```
+sending_email_address=<your-sample-email-address>
+password=<password-for-your-sample-application>
+receiving_email=<put-any-email-address>
+```
+7. Start the app
 ```
 python app.py
 ```
-7. There are two options for using the app. Through an Aplication Programming Interface (API) or web User interface (UI)
-8. To make a request using the API, <a href = "https://github.com/kimerajoseph/FRIDAY_code_challenge_KJ/edit/main/api_call_procedure.txt" target="_blank"><p> Follow this procedure </p><a/>
-9. To user the web UI, <a href = "https://github.com/kimerajoseph/FRIDAY_code_challenge_KJ/blob/main/using_the_web_UI.txt" target="_blank"><p> Follow this procedure </p><a/>
-9. To run tests, RUN pytest command from the root directory
+8. There are two options for using the app. Through an Aplication Programming Interface (API) or web User interface (UI)
+9. To make a request using the API, <a href = "https://github.com/kimerajoseph/FRIDAY_code_challenge_KJ/edit/main/api_call_procedure.txt" target="_blank"><p> Follow this procedure </p><a/>
+10. To user the web UI, <a href = "https://github.com/kimerajoseph/FRIDAY_code_challenge_KJ/blob/main/using_the_web_UI.txt" target="_blank"><p> Follow this procedure </p><a/>
+11. To run tests, RUN pytest command from the root directory
 ```
 pytest
 ```
