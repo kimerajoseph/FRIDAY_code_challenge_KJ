@@ -105,7 +105,7 @@ Docker already installed. If not,check the official docs <a href="https://docs.d
 5. Run the app and test as before
   
 ## RUNNING TESTS INSIDE A DOCKER CONTAINER
-1. Get the container ID by running the command below
+1. Get the container ID by running the command below and copying the container ID 
   ```
   docker ps
   ```
