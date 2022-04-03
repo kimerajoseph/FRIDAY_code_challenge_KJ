@@ -48,7 +48,7 @@ The final tests for this code were done on a Linux-2 machine. For other operatin
 
 1. Fork and clone this repository 
 2. Change to the root directory of the project folder
-3. Create a virtual environemnt (I am assuming you alread have pip/pip3 installed on your computer)
+3. Create a virtual environemnt (I am assuming you alread have pip/pip3 and virtualenv installed on your computer)
 
 ```
 virtualenv <your-virtual-env-name>
