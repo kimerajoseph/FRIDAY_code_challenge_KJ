@@ -21,6 +21,10 @@ For every address received, the following procedure is followed. We use Regex an
 
 For every pattern matched, further confirmatory checks are carried out to be sure of correctness of street and housenumber 
 
+## Choosing tools to deliver a solution
+I decided to build a Flask app to process and deliver the data to the various systems that use it. Although a single python script can do the job, I had to think about how the system obtains data from the source or and how potential users will interact with it. Since data is likely got through an external API, I provided an option of testing the system by making a POST request using an API testing tools like Thunder extension in VSCODE or Postman
+I included a web UI although in this case, I dont know if its required. This was mostly to showcase my various coding skills in the different languages I have learnt so far
+
 ### Tools Used
 1. Pytest
 2. https://regex101.com/ (To check Regex patterns)
