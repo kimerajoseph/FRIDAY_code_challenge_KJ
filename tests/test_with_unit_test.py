@@ -23,7 +23,8 @@ def sample_address_list():
 # ================================================================================================
 def test_object_type_of_processed_address(sample_address_list):
     for address in sample_address_list:
-        assert type(eval(process_addresses.process_address(address))) is dict
+        #assert type(eval(process_addresses.process_address(address))) is dict
+        assert type(process_addresses.process_address(address)) is dict
 
 # ================================================================================================
 # Test the data type of key,value pairs in the returned dictionary. Expected type is string
@@ -31,7 +32,7 @@ def test_object_type_of_processed_address(sample_address_list):
 def test_data_type_of_key_values_of_processed_address_dict(sample_address_list):
     for address in sample_address_list:
         processed_data = process_addresses.process_address(address)
-        processed_data = eval(processed_data)
+        #processed_data = eval(processed_data)
         for key,value in processed_data.items():
             assert type(key) is str and type(value) is str
 
@@ -41,7 +42,7 @@ def test_data_type_of_key_values_of_processed_address_dict(sample_address_list):
 def test_number_key_values_pairs_of_processed_address_dict(sample_address_list):
     for address in sample_address_list:
         processed_data = process_addresses.process_address(address)
-        processed_data = eval(processed_data)
+        #processed_data = eval(processed_data)
         expected_key_value_pairs = 0
         for key,value in processed_data.items():
             expected_key_value_pairs += 1

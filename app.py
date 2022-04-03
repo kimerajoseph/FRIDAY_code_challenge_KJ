@@ -1,3 +1,4 @@
+from base64 import encode
 from flask import Flask,request, render_template, jsonify
 import os
 from os.path import join, dirname, realpath
@@ -28,17 +29,17 @@ def process_address_api():
     try:
         if isinstance(raw_address, dict):
             processed_address = process_addresses.process_address(raw_address["address"])
-            processed_address = eval(processed_address)
+            #processed_address = eval(processed_address)
             print(processed_address)
             print(jsonify(processed_address))
-            return jsonify(processed_address)
+            return jsonify(eval(processed_address))
 
         elif isinstance(raw_address,list):
             list_of_api_addresses_requested = []
             for item in raw_address:
                 processed_address = process_addresses.process_address(item["address"])
-                processed_address = eval(processed_address)
-                list_of_api_addresses_requested.append(processed_address)
+                #processed_address = eval(processed_address)
+                list_of_api_addresses_requested.append(eval(processed_address))
             return jsonify(list_of_api_addresses_requested)
 
     except Exception as err:
@@ -98,13 +99,15 @@ def process_address_csv():
     my_addresses = csv_address_file["addresses"].tolist()
     if len(my_addresses) == 1:
         processed_address = process_addresses.process_address(my_addresses[0])
-        processed_address = eval(processed_address)
+        #processed_address = eval(processed_address)
         return render_template("address_return.html", returned_address=processed_address)
     
     elif len(my_addresses) > 1:
         list_of_processed_addresses = process_addresses.process_multiple_addresses_func(my_addresses)
         list_of_processed_addresses = eval(list_of_processed_addresses)
-        return jsonify(list_of_processed_addresses)
+        for csv_address in list_of_processed_addresses:
+            csv_final_processed_list.append(eval(csv_address))
+        return jsonify(csv_final_processed_list)
 
 
 if __name__ == '__main__':

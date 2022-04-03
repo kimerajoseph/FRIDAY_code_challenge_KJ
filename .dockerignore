@@ -1,0 +1,6 @@
+*.txt
+*.md
+*.csv
+static/file/
+!requirements.txt 
+.gitignore
