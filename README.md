@@ -116,7 +116,7 @@ Docker already installed. If not,check the official docs <a href="https://docs.d
   ```
   pytest
   ```
-4. After. type exit to close the bash session
+4. After, type exit to close the bash session
   ```
   exit
   ```
