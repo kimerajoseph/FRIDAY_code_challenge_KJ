@@ -95,8 +95,8 @@ Docker already installed. If not,check the official docs <a href="https://docs.d
   ```
   docker build -t <image-name> .
   ```
-  The above command builds and tags a docker image using the Dockerfile in the current directory
-2. ```
+ 2. The above command builds and tags a docker image using the Dockerfile in the current directory
+ ```
   docker run <image-name>
   ```
 3. Docker starts and runs locally
