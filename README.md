@@ -40,11 +40,15 @@ The repository contains the following files
 2. process_addresses.py - Python script containing the address processing functions
 3. functions folder - Contains the send_email script that contains a function that sends out email alerts in case of new address patterns and/or errors
 4. tests folder - Contains all tests to be run against the application
+5. Docker and .dockerignore files to run the app in a docker container (Especially for windows users)
 
 ## How to set up and run the code
 1. Fork and clone this repository 
 2. Change to the root directory of the project folder
 3. Create a virtual environemnt (I am assuming you alread have pip/pip3 installed on your computer)
+
+# NOTE:
+The final tests for this code were done on a Linux-2 machine. For other operating systems, I advise you run the app in a docker container. All the necessary files and instructions are included in this repository
 ```
 virtualenv <your-virtual-env-name>
 ```
@@ -81,4 +85,38 @@ python app.py
 pytest
 ```
 
-
+## PROCEDURE FOR RUNNING THE APP USING DOCKER
+The repository contains docker files that can be used to build and run images
+  
+## Prerequisites
+Docker already installed. If not,check the official docs <a href="https://docs.docker.com/get-docker/"><p> Here </p></a>
+  
+1. Run the following command
+  ```
+  docker build -t <image-name> .
+  ```
+  The above command builds and tags a docker image using the Dockerfile in the current directory
+2. ```
+  docker run <image-name>
+  ```
+3. Docker starts and runs locally
+4. Copy and paste the provided URL in the browser (The URL with the comment CRTL+C. Try both URLs and see which one works)
+5. Run the app and test as before
+  
+## RUNNING TESTS INSIDE A DOCKER CONTAINER
+1. Get the container ID by running the command below
+  ```
+  docker ps
+  ```
+2. Open a bash session inside the container
+  ```
+  docker exec -it <container_id> /bin/bash 
+  ```
+3. Run the following command
+  ```
+  pytest
+  ```
+4. After. type exit to close the bash session
+  ```
+  exit
+  ```
