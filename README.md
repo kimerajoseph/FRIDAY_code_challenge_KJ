@@ -10,7 +10,7 @@ An address provider returns addresses only with concatenated street names and nu
 Python
 
 ### Version
-Python 3.9
+Python 3.7
 
 ### Procedure
 For every address received, the following procedure is followed. We use Regex and conditional statements to match various address patterns and process them accordingly. We use conditional statements to:
