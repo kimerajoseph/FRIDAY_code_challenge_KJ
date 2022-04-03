@@ -22,8 +22,8 @@ For every address received, the following procedure is followed. We use Regex an
 For every pattern matched, further confirmatory checks are carried out to be sure of correctness of street and housenumber 
 
 ## Choosing tools to deliver a solution
-The instructions request for a program but reading up on the differences between a Program and Application, they are not so clear. So, I decided to develop an application instead as I am not familiar with developing programs
-I have built a Flask app to process and deliver the data to the various systems that use it. Although a single python script can do the job, I had to think about how the system obtains data from the source or how potential users will interact with the app. Since data is likely got through an external API, I provided an option of testing the system by making a POST request using an API testing tools like Thunder extension in VSCODE or Postman
+The instructions request for a program but reading up on the differences between a Program and Application, they are not so clear. So, I decided to develop an application instead as I am not familiar with developing programs. <br/>
+I have built a Flask app to process and deliver the data to the various systems that use it. Although a single python script can do the job, I had to think about how the system obtains data from the source or how potential users will interact with the app. Since data is likely got through an external API, I provided an option of testing the system by making a POST request using an API testing tools like Thunder extension in VSCODE or Postman <br/>
 I included a web UI although in this case, I dont know if its required. This was mostly to showcase my various coding skills in the different languages I have learnt so far
 
 ### Tools Used
