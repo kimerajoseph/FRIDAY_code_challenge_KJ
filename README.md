@@ -43,12 +43,13 @@ The repository contains the following files
 5. Docker and .dockerignore files to run the app in a docker container (Especially for windows users)
 
 ## How to set up and run the code
+## NOTE:
+The final tests for this code were done on a Linux-2 machine. For other operating systems, I advise you run the app in a docker container. All the necessary files and instructions are included in this repository
+
 1. Fork and clone this repository 
 2. Change to the root directory of the project folder
 3. Create a virtual environemnt (I am assuming you alread have pip/pip3 installed on your computer)
 
-# NOTE:
-The final tests for this code were done on a Linux-2 machine. For other operating systems, I advise you run the app in a docker container. All the necessary files and instructions are included in this repository
 ```
 virtualenv <your-virtual-env-name>
 ```
